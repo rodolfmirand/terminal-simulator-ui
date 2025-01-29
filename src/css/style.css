@@ -17,7 +17,8 @@ body {
     .input_line {
         width: 100%;
         display: flex;
-
+        margin-top: 10px;
+        
         #command {
             width: 100%;
             background-color: black;
@@ -33,11 +34,12 @@ body {
     }
 
     .command_line {
+        margin-top: 10px;
         width: 100%;
-        height: 17px;
-        display: flex;
-        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr;
         margin-bottom: 10px;
+        
     }
 }
 
