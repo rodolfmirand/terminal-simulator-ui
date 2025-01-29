@@ -1,0 +1,52 @@
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    color: white;
+}
+
+#terminal {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px;
+    font-size: 15px;
+
+    .input_line {
+        width: 100%;
+        height: 17px;
+        display: flex;
+        align-items: center;
+
+        #command {
+            width: 100%;
+            background-color: black;
+            border: none;
+            color: white;
+            font-family: 'Courier New', monospace;
+            font-size: 15px;
+        }
+
+        #command:focus{
+            outline: none;
+        }
+    }
+
+    .command_line {
+        width: 100%;
+        height: 17px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        p {
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-family: 'Courier New', monospace;
+        }
+    }
+}
