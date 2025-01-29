@@ -13,13 +13,10 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0px;
-    font-size: 15px;
 
     .input_line {
         width: 100%;
-        height: 17px;
         display: flex;
-        align-items: center;
 
         #command {
             width: 100%;
@@ -30,7 +27,7 @@ body {
             font-size: 15px;
         }
 
-        #command:focus{
+        #command:focus {
             outline: none;
         }
     }
@@ -41,12 +38,13 @@ body {
         display: flex;
         align-items: center;
         margin-bottom: 10px;
-
-        p {
-            margin: 0;
-            padding: 0;
-            color: white;
-            font-family: 'Courier New', monospace;
-        }
     }
+}
+
+p {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Courier New', monospace;
 }
