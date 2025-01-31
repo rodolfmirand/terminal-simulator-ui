@@ -13,19 +13,19 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0px;
+    font-size: 16px;
 
     .input_line {
         width: 100%;
         display: flex;
         margin-top: 10px;
-        
+
         #command {
             width: 100%;
             background-color: black;
             border: none;
             color: white;
             font-family: 'Courier New', monospace;
-            font-size: 15px;
         }
 
         #command:focus {
@@ -39,12 +39,11 @@ body {
         display: grid;
         grid-template-columns: 1fr;
         margin-bottom: 10px;
-        
     }
 }
 
 p {
-    font-size: 15px;
+    font-size: 14px;
     margin: 0;
     padding: 0;
     color: white;
