@@ -18,7 +18,7 @@ document.addEventListener('keydown', async (event) => {
             const response = await request(commands[0], commands, path)
             console.log(response)
 
-            commandLineParagraph.textContent = document.getElementById('directory').textContent + commandInput.value
+            commandLineParagraph.textContent = document.getElementById('directory').textContent + ">" + commandInput.value
             resultLineParagraph.innerHTML = response.message.replace(/\n/g, "<br>")
 
             commandLine.appendChild(commandLineParagraph)
