@@ -49,3 +49,7 @@ p {
     color: white;
     font-family: 'Courier New', monospace;
 }
+
+.resultParagraph {
+    white-space: pre;
+}
