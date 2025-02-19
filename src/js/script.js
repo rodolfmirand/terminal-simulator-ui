@@ -1,5 +1,5 @@
 const commandHistory = JSON.parse(localStorage.getItem('commandHistory')) || [];
-let historyIndex = -1;
+let historyIndex = commandHistory.length;
 
 document.addEventListener('keydown', async (event) => {
     const commandInput = document.getElementById('command');
@@ -32,17 +32,13 @@ document.addEventListener('keydown', async (event) => {
         }
     }else if(event.key === 'ArrowUp'){
         event.preventDefault();
-        if(historyIndex < commandHistory.length - 1){
-            historyIndex++;
-            commandInput.value = commandHistory[historyIndex] || "";
+        if(historyIndex > 0){
+            commandInput.value = commandHistory[--historyIndex] || "";
         }
     }else if(event.key == 'ArrowDown'){
         event.preventDefault();
-        if(historyIndex > 0){
-            commandInput.value = commandHistory[--historyIndex] || "";
-        }else{
-            historyIndex = -1;
-            commandInput.value = '';    
+        if(historyIndex < commandHistory.length - 1){
+            commandInput.value = commandHistory[++historyIndex] || "";
         }
     }
 });
@@ -53,10 +49,12 @@ async function request(command, args, path) {
     try {
         const response = await fetch(url, {
             method: 'POST',
-            body: JSON.stringify({
-                'path': path,
-                'args': args
-            }),
+            body: JSON.stringify(
+{
+    'path': path,
+    'args': args
+}
+        ),
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
